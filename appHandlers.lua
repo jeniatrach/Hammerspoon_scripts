@@ -16,8 +16,6 @@ end
 
 -- Map application bundle IDs to their respective handler functions
 appHandlers["com.microsoft.VSCode"] = handleAppActivation
-appHandlers["com.apple.Safari"] = handleAppActivation
-appHandlers["com.google.Chrome"] = handleAppActivation
 appHandlers["com.jetbrains.pycharm"] = handleAppActivation
 appHandlers["com.anytype.anytype"] = handleAppActivation  -- Correct bundle ID for AnyType
 -- Add more applications and their handlers here

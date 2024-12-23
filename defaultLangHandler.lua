@@ -1,4 +1,4 @@
-local appHandlers = {}
+local defaultLangHandler = {}
 
 -- Function to handle application activation
 local function handleAppActivation(appName, appBundleID)
@@ -15,9 +15,9 @@ local function handleAppActivation(appName, appBundleID)
 end
 
 -- Map application bundle IDs to their respective handler functions
-appHandlers["com.microsoft.VSCode"] = handleAppActivation
-appHandlers["com.jetbrains.pycharm"] = handleAppActivation
-appHandlers["com.anytype.anytype"] = handleAppActivation  -- Correct bundle ID for AnyType
+defaultLangHandler["com.microsoft.VSCode"] = handleAppActivation
+defaultLangHandler["com.jetbrains.pycharm"] = handleAppActivation
+defaultLangHandler["com.anytype.anytype"] = handleAppActivation  -- Correct bundle ID for AnyType
 -- Add more applications and their handlers here
 
-return appHandlers
+return defaultLangHandler

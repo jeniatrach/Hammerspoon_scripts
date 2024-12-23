@@ -1,11 +1,11 @@
-local appHandlers = require("appHandlers")
+local defaultLangHandler = require("defaultLangHandler")
 
 -- Monitor application activation events
 local appWatcher = hs.application.watcher.new(function(appName, eventType, app)
     if eventType == hs.application.watcher.activated or eventType == hs.application.watcher.unhidden then
         local appBundleID = app:bundleID()
         print("Activated application: " .. appName .. " (" .. appBundleID .. ")")
-        local handler = appHandlers[appBundleID]
+        local handler = defaultLangHandler[appBundleID]
         if handler then
             handler(appName, appBundleID)
         else

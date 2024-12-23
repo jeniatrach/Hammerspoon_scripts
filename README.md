@@ -5,5 +5,5 @@
 3) put the lua files at "~/.hammerspoon/<file>" for example "~/.hammerspoon/init.lua"
 
 # scripts
-init: your main
-defaultLangHandler: set default language "EN" for selected apps
+- init: your main
+- defaultLangHandler: set default language "EN" for selected apps
